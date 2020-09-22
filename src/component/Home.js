@@ -67,7 +67,7 @@ export default class Home extends Component {
         
             <Player video={this.state.selectedVideo} />
 
-            <div className="col-md-4 custom-p py-4 mb-5">
+            <div className="col-md-4 custom-p pt-5 mt-5">
            
               {this.state.list &&
                 this.state.list.map((item, i) => (

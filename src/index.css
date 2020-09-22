@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 html{
   scroll-behavior: smooth;
@@ -7,7 +7,7 @@ html{
 
 body {
   margin: 0;
-  font-family: "Montserrat";
+  font-family: 'Roboto', sans-serif;
   background-color: rgb(255, 255, 255);
 }
 
@@ -15,7 +15,7 @@ body {
   background-image: radial-gradient( circle 830px at 95.6% -5%,  rgba(244,89,128,1) 0%, rgba(223,23,55,1) 90% );
 }
 
-.bg-w{
+.bg-black{
   background-color: rgb(0, 0, 0);
 }
 
@@ -24,9 +24,8 @@ body {
   transition: 0.5s;
 }
 
-.bg-trans:hover{
-  background-color: rgba(29, 93, 190, 0.884);
-  text-shadow: -2px 2px 5px black;
+.bg-trans:hover .hr-bar{
+  width: 100%;
 }
 
 .custom-p{
@@ -53,7 +52,7 @@ body {
 
 .f-top{
   position: fixed;
-  bottom:0px;
+  top:0px;
   width: 100%;
   z-index: 1;
 }
@@ -61,7 +60,7 @@ body {
 .player{
   position: sticky;
   top: 0px;
-  height: 90vh;
+  height: 100vh;
 }
 
 .vidCard{
@@ -82,5 +81,10 @@ body {
 
   .loading-w{
     width: 20%;
+  }
+
+  .player{
+    position: static;
+    height: auto;
   }
 }
