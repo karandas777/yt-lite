@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat";
+  background-color: rgb(255, 255, 255);
+}
+
+.bg-grad{
+  background-image: radial-gradient( circle 830px at 95.6% -5%,  rgba(244,89,128,1) 0%, rgba(223,23,55,1) 90% );
+}
+
+.bg-w{
+  background-color: rgb(0, 0, 0);
+}
+
+.bg-trans{
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.5s;
+}
+
+.bg-trans:hover{
+  background-color: rgba(29, 93, 190, 0.884);
+  text-shadow: -2px 2px 5px black;
+}
+
+.custom-p{
+  padding: 20px;
+}
+
+.d-tb{
+  display:table;
+}
+
+.d-tc{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.loading{
+  font-size: 28px;
+  font-weight: lighter;
+}
+
+.loading-w{
+  width: 10%;
+}
+
+.f-top{
+  position: fixed;
+  bottom:0px;
+  width: 100%;
+  z-index: 1;
+}
+
+.player{
+  position: sticky;
+  top: 0px;
+  height: 90vh;
+}
+
+.vidCard{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+@media screen and (max-width:600px){
+  .custom-p{
+    padding: 5px;
+  } 
+
+  .loading{
+    font-size: 20px;
+  }
+
+  .loading-w{
+    width: 20%;
+  }
+}
