@@ -4,6 +4,7 @@ import Loader from "./Loader";
 import VideoCard from "./VideoCard";
 import Header from "./Header";
 import Player from "./Player";
+import dummylist from './Dummylist';
 
 export default class Home extends Component {
   constructor(props) {
@@ -18,7 +19,13 @@ export default class Home extends Component {
 
   componentDidMount = () => {
     this.funGetVideos();
+    // this.funDummy();
   };
+
+
+  funDummy=()=>{
+    this.setState({list: dummylist , selectedVideo : dummylist[0]});
+  }
 
   funGetVideos = () => {
     Axios.get("https://www.googleapis.com/youtube/v3/search", {
@@ -28,6 +35,7 @@ export default class Home extends Component {
         q: this.state.query,
         maxResults: 15,
         type: "video",
+        order: "date",
       },
     })
       .then((res) => {
@@ -62,12 +70,12 @@ export default class Home extends Component {
     return (
       <React.Fragment>
         <Header funSetQuery={this.funSetQuery} />
-        <div className="container p-0">
+        <div className="container-fluid p-0">
           <div className="row p-0 m-0">
         
             <Player video={this.state.selectedVideo} />
 
-            <div className="col-md-4 custom-p pt-5 mt-5">
+            <div className="col-md-5 custom-p pt-5 mt-4 bg-light border-left">
            
               {this.state.list &&
                 this.state.list.map((item, i) => (

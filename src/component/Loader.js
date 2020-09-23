@@ -12,10 +12,10 @@ export default class Loader extends Component {
             className="loading-w"
           />
           <div></div>
-          <div className="loading mb-3">
-            YT <span className="text-danger">Lite</span>
+          <div className="loading mb-3 text-danger">
+            Lite
           </div>
-          <div className="spinner-grow text-light"></div>
+          <div className="spinner-border"></div>
         </div>
         <div className="col-md-4"></div>
       </div>
