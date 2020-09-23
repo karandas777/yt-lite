@@ -9,7 +9,7 @@ export default class VideoCard extends Component {
     const { item } = this.props;
     return (
       <button
-        className="btn btn-link text-decoration-none mx-1 mb-3 p-0 w-100 shadow-sm"
+        className="btn btn-link text-decoration-none mb-3 p-0 w-100 shadow-sm"
         onClick={() => {
           this.funChange(item);
         }}
@@ -24,7 +24,7 @@ export default class VideoCard extends Component {
             {item.snippet.title}
             <div className="hr-bar rounded-pill bg-danger mt-3"></div>
             <div className="h6 mt-3 mb-0 text-left">
-              <i class="fa fa-youtube-play text-danger mr-2"></i>
+              <i className="fa fa-youtube-play text-danger mr-2"></i>
               {item.snippet.channelTitle}
             </div>
           </div>

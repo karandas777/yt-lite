@@ -4,7 +4,7 @@ export default class Player extends Component {
   render() {
     const { video } = this.props;
     return (
-      <div className="col-md-7 custom-p pt-5 player">
+      <div className="col-md-6 custom-p pt-5 player">
         <div className="embed-responsive embed-responsive-16by9 mb-2 mt-4">
           <iframe
             className="embed-responsive-item rounded-lg"
@@ -19,10 +19,14 @@ export default class Player extends Component {
         <div className="mt-3 px-1">
           <div className="h6">{video.snippet.title}</div>
 
+            <div className="mb-2">
+            <a className="badge badge-success" href={`https://www.ssyoutube.com/watch?v=${video.id.videoId}`}>
+                Download
+              </a>
+            </div>
           <div className="small text-muted">
           {video.snippet.description}
           </div>
-
         </div>
       </div>
     );

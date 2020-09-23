@@ -6,7 +6,7 @@ export default class Header extends Component {
         super(props)
     
         this.state = {
-             query:""
+             query:this.props.query,
         }
     }
     
@@ -25,7 +25,7 @@ export default class Header extends Component {
             <div className="f-top bg-danger shadow-sm w-100">
                 <div className="container p-1 d-flex justify-content-between">
                         <img src={require('../assets/logo64.png')} width="44" className="mx-2 my-1" alt="logo"/>
-        
+                        
                         <input type="text" className="form-control border-0 w-50 d-inline-block rounded-pill mt-2 shadow-sm"
                             placeholder="Search" value={this.state.query} onChange={this.funHandleChange}
                         />

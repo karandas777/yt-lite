@@ -12,7 +12,7 @@ export default class Home extends Component {
 
     this.state = {
       list: "",
-      query:"",
+      query:"mrwhosetheboss",
       selectedVideo:""
     };
   }
@@ -35,7 +35,7 @@ export default class Home extends Component {
         q: this.state.query,
         maxResults: 15,
         type: "video",
-        order: "date",
+        // order: "date",
       },
     })
       .then((res) => {
@@ -54,7 +54,7 @@ export default class Home extends Component {
   }
 
   funChangeSelected=(video)=>{
-    this.setState({selectedVideo:video});
+    this.setState({selectedVideo:video},()=>{window.scrollTo(0,0)});
   }
 
   render() {
@@ -69,13 +69,13 @@ export default class Home extends Component {
 
     return (
       <React.Fragment>
-        <Header funSetQuery={this.funSetQuery} />
+        <Header funSetQuery={this.funSetQuery} query={this.state.query} />
         <div className="container-fluid p-0">
           <div className="row p-0 m-0">
         
             <Player video={this.state.selectedVideo} />
 
-            <div className="col-md-5 custom-p pt-5 mt-4 bg-light border-left">
+            <div className="col-md-6 custom-p pt-5 mt-4 bg-light border-left">
            
               {this.state.list &&
                 this.state.list.map((item, i) => (
