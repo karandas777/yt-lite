@@ -22,7 +22,7 @@ export default class VideoCard extends Component {
         >
           <div className="bg-trans p-3 h3 rounded-lg text-light m-0 text-center">
             {item.snippet.title}
-            <div className="hr-bar rounded-pill bg-danger mt-3"></div>
+            <div className="hr-bar rounded-pill bg-grad mt-3"></div>
             <div className="h6 mt-3 mb-0 text-left">
               <i className="fa fa-youtube-play text-danger mr-2"></i>
               {item.snippet.channelTitle}

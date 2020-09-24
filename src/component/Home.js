@@ -12,14 +12,14 @@ export default class Home extends Component {
 
     this.state = {
       list: "",
-      query:"mrwhosetheboss",
+      query:"",
       selectedVideo:""
     };
   }
 
   componentDidMount = () => {
-    this.funGetVideos();
-    // this.funDummy();
+    // this.funGetVideos();
+    this.funDummy();
   };
 
 
