@@ -12,14 +12,14 @@ export default class Home extends Component {
 
     this.state = {
       list: "",
-      query:"",
+      query:"mrwhosetheboss",
       selectedVideo:""
     };
   }
 
   componentDidMount = () => {
-    // this.funGetVideos();
-    this.funDummy();
+    this.funGetVideos();
+    // this.funDummy();
   };
 
 
@@ -33,9 +33,8 @@ export default class Home extends Component {
         key: "AIzaSyBmifzyLg3lghgYdF43gbpvbrZa5bptd_w",
         part: "snippet",
         q: this.state.query,
-        maxResults: 15,
+        maxResults: 10,
         type: "video",
-        // order: "date",
       },
     })
       .then((res) => {
@@ -69,7 +68,7 @@ export default class Home extends Component {
 
     return (
       <React.Fragment>
-        <Header funSetQuery={this.funSetQuery} query={this.state.query} />
+        <Header funSetQuery={this.funSetQuery} />
         <div className="container-fluid p-0">
           <div className="row p-0 m-0">
         

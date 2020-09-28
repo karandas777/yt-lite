@@ -6,7 +6,7 @@ export default class Header extends Component {
         super(props)
     
         this.state = {
-             query:this.props.query,
+             query:"",
         }
     }
     
@@ -29,7 +29,7 @@ export default class Header extends Component {
                         <input type="text" className="form-control border-0 w-50 d-inline-block rounded-pill mt-2 shadow-sm"
                             placeholder="Search" value={this.state.query} onChange={this.funHandleChange}
                         />
-                        <button className="btn btn-sm px-2 py-0 rounded-pill mx-2 my-1" onClick={this.funSearch}>
+                        <button className="btn btn-sm px-2 py-0 rounded-pill outline-none mx-2 my-1" onClick={this.funSearch}>
                             <i className="fa fa-search text-light fa-2x"></i>
                         </button>
                         
